@@ -12,11 +12,133 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
 
     <div class="container">
 
-        <div ng-app="">
+        <div>
+
+
+
+            <h2>Total Vote  {{totalvote}}</h2>
+
+            <table class="table table-bordered">
+                <thead>
+
+                </thead>
+                <tbody>
+
+
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6" id="smile1"><img src="/img/smile1.png" class="img-thumbnail" height="60" width="60"></div>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6" id="smile1"><img src="/img/smile2.png" class="img-thumbnail" height="60" width="60"></div>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6" id="smile1"><img src="/img/smile3.png" class="img-thumbnail" height="60" width="60"></div>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6" id="smile1"><img src="/img/smile4.png" class="img-thumbnail" height="60" width="60"></div>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6" id="smile1"><img src="/img/smile5.png" class="img-thumbnail" height="60" width="60"></div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3>Excellent</h3></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3>Good</h3></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3>Average</h3></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3>Poor</h3></div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h3>Very Poor</h3></div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h1>{{smile1Amount}}</h1></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h1>{{smile2Amount}}</h1></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h1>{{smile3Amount}}</h1></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h1>{{smile4Amount}}</h1></div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h1>{{smile5Amount}}</h1></div>
+                            </div>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <h4>        Voting result will refresh automatically, so do not refresh
+</h4>
+
+
+
+
+
+
+
             <p>Name :
                 <input type="text" ng-model="name">
             </p>
@@ -24,7 +146,13 @@
         </div>
 
     </div>
-
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.firstName = "John";
+            $scope.lastName = "Doe";
+        });
+    </script>
 </body>
 
 </html>
