@@ -32,31 +32,31 @@
                     <tr>
                         <td>
                             <div class="row">
-                                <div class="col-sm-6" id="smile1"><img src="/img/smile1.png" class="img-thumbnail" height="60" width="60"></div>
+                                <div class="col-sm-6" id="smile1" ng-click="smile1click()"><img src="/img/smile1.jpg" class="img-thumbnail" height="60" width="60"></div>
 
                             </div>
                         </td>
                         <td>
                             <div class="row">
-                                <div class="col-sm-6" id="smile1"><img src="/img/smile2.png" class="img-thumbnail" height="60" width="60"></div>
+                                <div class="col-sm-6" id="smile1" ng-click="smile2click()"><img src="/img/smile2.jpg" class="img-thumbnail" height="60" width="60"></div>
 
                             </div>
                         </td>
                         <td>
                             <div class="row">
-                                <div class="col-sm-6" id="smile1"><img src="/img/smile3.png" class="img-thumbnail" height="60" width="60"></div>
+                                <div class="col-sm-6" id="smile1" ng-click="smile3click()"><img src="/img/smile3.jpg" class="img-thumbnail" height="60" width="60"></div>
 
                             </div>
                         </td>
                         <td>
                             <div class="row">
-                                <div class="col-sm-6" id="smile1"><img src="/img/smile4.png" class="img-thumbnail" height="60" width="60"></div>
+                                <div class="col-sm-6" id="smile1" ng-click="smile4click()"><img src="/img/smile4.jpg" class="img-thumbnail" height="60" width="60"></div>
 
                             </div>
                         </td>
                         <td>
                             <div class="row">
-                                <div class="col-sm-6" id="smile1"><img src="/img/smile5.png" class="img-thumbnail" height="60" width="60"></div>
+                                <div class="col-sm-6" id="smile1" ng-click="smile5click()"><img src="/img/smile5.jpg" class="img-thumbnail" height="60" width="60"></div>
 
                             </div>
                         </td>
@@ -130,8 +130,8 @@
                     </tr>
                 </tbody>
             </table>
-            <h4>        Voting result will refresh automatically, so do not refresh
-</h4>
+            <h6>        Voting result will refresh automatically, so do not refresh
+</h6>
 
 
 
@@ -139,9 +139,9 @@
 
 
 
-            <p>Name :
-                <input type="text" ng-model="name">
-            </p>
+
+            <input type="text" ng-model="name">
+
             <h1>Hello {{name}}</h1>
         </div>
 
@@ -149,8 +149,39 @@
     <script>
         var app = angular.module('myApp', []);
         app.controller('myCtrl', function ($scope) {
-            $scope.firstName = "John";
-            $scope.lastName = "Doe";
+
+
+            $scope.smile1Amount = 0;
+            $scope.smile2Amount = 0;
+            $scope.smile3Amount = 0;
+            $scope.smile4Amount = 0;
+            $scope.smile5Amount = 0;
+
+
+
+            $scope.smile1click = function () {
+
+                $scope.smile1Amount++;
+            }
+            $scope.smile1click = function () {
+
+                $scope.smile1Amount++;
+            }
+            $scope.smile1click = function () {
+
+                $scope.smile1Amount++;
+            }
+            $scope.smile1click = function () {
+
+                $scope.smile1Amount++;
+            }
+            $scope.smile1click = function () {
+
+                $scope.smile1Amount++;
+            }
+
+
+
         });
     </script>
 </body>
